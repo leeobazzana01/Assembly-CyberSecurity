@@ -7,14 +7,14 @@ Esse repositório contém alguns códigos de asssembly usados para o aprendizado
     -Strings
     -Estruturas de Dados
 
-## Instalação e COnfiguração de Ambiente
+## Instalação e Configuração de Ambiente
     Esse tutorial básico foi feito tendo como base o sistema operacional Linux.
     Para rodar qualquer código Assembly no Linux precisamos instalar o Assembler, através do gerenciador de pacotes.
     Usaremos como exemplo o Assemble Nasm. Bash para instalação: 
 ### sudo apt install nasm 
-    Para verificar a instalação: 
+    Para instalar o Assembler 
 ### nasm -v 
-    Após isso, para compilar qualquer código.
+    Para verificar a instalação e a versão instalada.
 
 ## Estudando e Aplicando Conceitos
 
