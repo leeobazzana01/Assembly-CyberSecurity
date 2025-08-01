@@ -25,16 +25,12 @@ cd ~/mars/MARS-main
 Se não houver um arquivo Mars.class, compile com:
 
 ```bash
-Copiar
-Editar
 javac Mars.java
 ```
 
 #### Execute o MARS
 
 ```bash
-Copiar
-Editar
 java Mars
 ```
 
@@ -42,22 +38,16 @@ java Mars
 #### 1. Abra o terminal e edite o arquivo de configuração:
 
 ```bash
-Copiar
-Editar
 nano ~/.bashrc
 ```
 #### 2. Adicione a seguinte linha ao final do arquivo:
 
 ``` bash
-Copiar
-Editar
 alias mars='java -cp ~/mars/MARS-main Mars'
 ```
 #### 3. Salve e recarregue:
 
 ```bash
-Copiar
-Editar
 source ~/.bashrc
 ```
 
