@@ -52,7 +52,19 @@ source ~/.bashrc
 ```
 
 ## Teoria de Programação com Assembly
+### Input/Output de Dados
+    Um programa nada mais é, na maioria das vezes, que um Algoritmo executando Entrada, Processamento e Saída de Informações.
+    Em Assembly, ao contrário de outras Linguagens de Programação Interpretadas com tipagem Dinâmica, para usar uma varíavel temos que: Declarar a variável, o seu tipo e manipulá-la nos Registradores da Memória (endereços que armazenam os Dados).
 
+#### Seu primeiro Código: "Hello World!"
+```
+.data                               #cabeçalho do código, onde estão os dados (.data) 
+	message: .asciiz "Hello World"  #variável de nome 'message' do tipo asciiz com as strings "Hello World!"
+.text                               #texto do código, onde está o corpo do código, funções, loops, etc
+	li $v0, 4                       # 'li' = load imediate, $v0 define qual operação será executada (4= imprimir string) na chamada da função/syscall
+	la $a0, message                 #'la' = load adress, carrega o endereço $a0, registrador usado para passar argumentos para syscalls, e atribui a ele a LABEL "message"
+	syscall                         #chama o sistema para imprimir a variável message
+```
 ## Exercícios 
 
 ## Projetos
