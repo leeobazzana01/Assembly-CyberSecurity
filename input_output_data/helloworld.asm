@@ -1,6 +1,6 @@
-.data 
-	hello_world: .asciiz "Hello world\n"
+.data
+	message: .asciiz "Hello World"
 .text
-	li $v0, 4 
-	la $a0, hello_world
+	li $v0, 4
+	la $a0, message
 	syscall
