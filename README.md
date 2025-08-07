@@ -51,7 +51,10 @@ alias mars='java -cp ~/mars/MARS-main Mars'
 source ~/.bashrc
 ```
 
-## Teoria de Programação com Assembly
+# Conceitos de Programação com Assembly (DEVO APRENDER)
+# 1. Nível Iniciante (Fundamentos MIPS)
+## Registradores e Tipos de Dados
+($zero, $t0-$t9, $s0-$s7, .word, .byte, .asciiz)
 ### Input/Output de Dados
     Um programa nada mais é, na maioria das vezes, que um Algoritmo executando Entrada, Processamento e Saída de Informações.
     Em Assembly, ao contrário de outras Linguagens de Programação Interpretadas com tipagem Dinâmica, para usar uma varíavel temos que: Declarar a variável, o seu tipo e manipulá-la nos Registradores da Memória (endereços que armazenam os Dados).
@@ -117,6 +120,121 @@ source ~/.bashrc
     syscall
 ```
 	Código correto, sem erros, feito acima
+
+## Operações Básicas
+(add, sub, and, or, slt, addi, lui)
+
+## Estruturas de Controle
+### Condicionais
+(beq, bne, slt + branches)
+
+### Loops
+(Usando beq/bne e registradores como contadores)
+
+## Funções em MIPS
+(jal, jr $ra, convenção de chamada)
+
+## Syscalls para E/S
+(li $v0 + syscall para print_int, read_int, etc)
+
+# 2. Nível Básico-Intermediário
+## Arrays/Vetores
+(lw/sw com offset, alinhamento word)
+
+## Strings
+(la para endereços, manipulação byte-a-byte)
+
+## Structs
+(Layout na memória, acesso a campos via offset)
+
+## Algoritmos Simples
+### Busca Linear
+(loop com lw + beq)
+
+### Bubble Sort
+(aninhamento de loops com comparações)
+
+# 3. Nível Intermediário
+## Ponteiros em MIPS
+(la vs lw, endereçamento indireto)
+
+## Alocação de Memória
+(.data vs .text, syscall 9 para heap)
+
+## Listas Encadeadas
+(nós com word para dado + word para próximo)
+
+## Recursão
+(Uso da pilha para $ra e argumentos)
+
+## Algoritmos Intermediários
+### Insertion Sort
+(manipulação de ponteiros na memória)
+
+### Merge Sort
+(recursão + manipulação complexa de arrays)
+
+# 4. Nível Intermediário-Avançado
+## Pilhas em MIPS
+($sp manipulation, push/pop convention)
+
+## Filas
+(implementação circular em memória)
+
+## Tabelas Hash
+(funções hash + tratamento de colisões)
+
+## Árvores Binárias
+(nós com left/right pointers)
+
+## Algoritmos Complexos
+### Quick Sort
+(partition recursivo)
+
+### Busca Binária
+(implementação iterativa/recursiva)
+
+# 5. Nível Avançado
+## Otimização MIPS
+(delay slots, pipeline hazards)
+
+## Chamadas do Sistema
+(implementação de syscalls customizados)
+
+## Integração C-MIPS
+### Convenção de Chamada
+(argumentos em $a0-$a3, retorno em $v0-$v1)
+
+### Inline Assembly
+(__asm__ em GCC para snippets MIPS)
+
+## Programação Dinâmica
+(Fibonacci com memoization)
+
+# 6. Nível Expert
+## MIPS no Hardware
+(FPGA implementations, Verilog/VHDL)
+
+## Compiladores para MIPS
+(GCC cross-compilation, backends LLVM)
+
+## Sistemas Operacionais
+(Bootloaders MIPS, context switching)
+
+## SIMD MIPS
+(MMI, uso de registradores especiais)
+
+markdown
+# Integração MIPS-Alto Nível
+## Chamadas entre C e MIPS
+1. **From C to MIPS**:
+   ```c
+   extern void mips_func();
+   int main() { mips_func(); }```
+2. **From mips to C**:
+	```.extern c_func
+		jal c_func
+	```
 	
 ## Artigos Estudados
 ### "Tutorial on MIPS Programming using MARS": https://profile.iiita.ac.in/bibhas.ghoshal/COA_2021/tutorials/Tutorial_MIPS_Using_MARS.pdf
