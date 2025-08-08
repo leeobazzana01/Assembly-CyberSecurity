@@ -51,41 +51,19 @@ alias mars='java -cp ~/mars/MARS-main Mars'
 source ~/.bashrc
 ```
 
-# Conceitos de Programação com Assembly (DEVO APRENDER)
-# 1. [Nivel Iniciante-Fundamentos](/home/leozin/ciencia_computacao/assembly/1.Iniciante)
+## Conceitos de Programação com Assembly (DEVO APRENDER)
+### 1. [Nivel Iniciante-Fundamentos](/home/leozin/ciencia_computacao/assembly/1.Iniciante/README.md)
 
-# 2. [Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário)
+### 2. [Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário/README.md)
 
-# 3. [Nível Intermediário](/home/leozin/ciencia_computacao/assembly/3.Intermediário)
+### 3. [Nível Intermediário](/home/leozin/ciencia_computacao/assembly/3.Intermediário/README.md)
 
-# 4. [Nível Intermediário-Avançado](/home/leozin/ciencia_computacao/assembly/4.Intermediário_Avançado)
+### 4. [Nível Intermediário-Avançado](/home/leozin/ciencia_computacao/assembly/4.Intermediário_Avançado/README.md)
 
-# 5. [Nível Avançado](/home/leozin/ciencia_computacao/assembly/5.Avançado/README.md)
+### 5. [Nível Avançado](/home/leozin/ciencia_computacao/assembly/5.Avançado/README.md)
 
-# 6. Nível Expert
-## MIPS no Hardware
-(FPGA implementations, Verilog/VHDL)
+### 6. [Nível Expert](/home/leozin/ciencia_computacao/assembly/6.Expert/README.md)
 
-## Compiladores para MIPS
-(GCC cross-compilation, backends LLVM)
-
-## Sistemas Operacionais
-(Bootloaders MIPS, context switching)
-
-## SIMD MIPS
-(MMI, uso de registradores especiais)
-
-markdown
-# Integração MIPS-Alto Nível
-## Chamadas entre C e MIPS
-1. **From C to MIPS**:
-   ```c
-   extern void mips_func();
-   int main() { mips_func(); }```
-2. **From mips to C**:
-	```.extern c_func
-		jal c_func
-	```
 	
 ## Artigos Estudados
 ### "Tutorial on MIPS Programming using MARS": https://profile.iiita.ac.in/bibhas.ghoshal/COA_2021/tutorials/Tutorial_MIPS_Using_MARS.pdf
