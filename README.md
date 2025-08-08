@@ -1,5 +1,5 @@
 # Assembly
-    O repositório contém alguns códigos de Asssembly em uma Arquitetura 64bits usados para o aprendizados de Conceitos Básicos, porém essenciais, da Ciência da Computação, como: Variáveis, Controle de fluxo, Manipulação de memória, Funções, Strings, Estruturas de Dados.
+O repositório contém alguns códigos de Asssembly em uma Arquitetura 64bits usados para o aprendizados de Conceitos Básicos, porém essenciais, da Ciência da Computação, como: Variáveis, Controle de fluxo, Manipulação de memória, Funções, Strings, Estruturas de Dados.
 
 
 ## MARS MIPS Assembly Simulator - Instalação no Linux

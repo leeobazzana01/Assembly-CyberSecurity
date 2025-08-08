@@ -1,6 +1,55 @@
 # 1. Nível Iniciante (Fundamentos MIPS)
 ## Registradores e Tipos de Dados
 ($zero, $t0-$t9, $s0-$s7, .word, .byte, .asciiz)
+
+### Tipos de Dados
+#### Caractere: '.byte'
+#### String: '.ascii' ou '.asciiz'->mais seguro 
+#### Inteiro: '.word'
+#### Float: '.float
+#### Double: '.double'
+
+
+### Registradores de Propósito Geral
+Existe um total e **32 registradores** de propósito geral em Assembly.
+#### 0. $zero
+Sempre **armazena zero** como valor, não dá pra sobrescrever.
+#### 1. $at (assembler temporary)
+**RESERVADO** para o Assembler, portanto não devemos usar. 
+#### 2 e 3. $v0, $v1 (value)
+Armazenam **VALORES DE RETORNO** de uma função.
+#### 4 - 7. $a0, $a3 (argument)
+Armazenam **ARGUMENTOS** a serem passados para uma função.
+#### 8- 15. $t0, $t7 (temporary)
+Armazenam **VALORES TEMPORÁRIOS**, que irão ser "excluídos" após a chamada de uma função.
+#### 16-23. $s0, $s7 (saved)
+Variáveis **SALVAS**, portanto serão **presenvadas entre chamadas** de função.
+#### 24-25. $t8, $t9 (temporary)
+Mais dois **valores temporários**.
+#### 26-27. $k0, $k1 (kernel)
+Reservados para o sistema operacional realizar tratamento de exceções.
+#### 28. $gp (Global Pointer)
+Ponteiro para **Área de Dados Globais**.
+#### 29. $sp (Stack Pointer)
+Ponteiro para o **TOPO DA PILHA**.
+#### 30. $fp (Frame Pointer)
+Ponteiro para o Frame de uma função.
+#### 31. $ra (Return Adress)
+Armazena o **Endereço de Retorno** de uma função.
+
+### Registradores Especiais
+#### PC (Program Counter)
+Mostra a próxima instrução a ser executada 
+#### HI e LO 
+Usados para operações de **MULTIPLICAÇÃO** e **DIVISAO** pois armazenam valores de 64 bits. 
+#### Status (SR)
+Registra o status do processador.
+#### Cause
+Indica a causa de uma exceção/interrupção.
+#### EPC (Exception Program Counter)
+Armazena o endereço de uma **instrução que causou exceção**.
+
+
 ### Input/Output de Dados
     Um programa nada mais é, na maioria das vezes, que um Algoritmo executando Entrada, Processamento e Saída de Informações.
     Em Assembly, ao contrário de outras Linguagens de Programação Interpretadas com tipagem Dinâmica, para usar uma varíavel temos que: Declarar a variável, o seu tipo e manipulá-la nos Registradores da Memória (endereços que armazenam os Dados).
