@@ -118,6 +118,12 @@ Armazena o endereço de uma **instrução que causou exceção**.
 
 ## Operações Básicas
 (add, sub, and, or, slt, addi, lui)
+### Soma: add 
+#### add $t2, $t1, $t0 
+Para somar $t0 e $t1 em $t2.
+#### addiu $t1, $t0, 1000 
+Soma o 1000 ao valor inteiro armazenado em $t0 e armazena o resultado em $t1 SEM overflow.
+O addiu faz o mesmo, porém com overflow. 
 
 ## Estruturas de Controle
 ### Condicionais

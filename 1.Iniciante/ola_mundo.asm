@@ -9,6 +9,6 @@ main:
 	la $a0, mensagem
 	syscall
 	
-	li $v0, 4
+	li $v1, 4
 	la $a1, inicial
 	syscall
