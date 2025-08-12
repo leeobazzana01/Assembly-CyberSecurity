@@ -12,3 +12,6 @@ main:
 	li $v1, 4
 	la $a1, inicial
 	syscall
+	
+	li $v0, 10 #instrução 10 do syscall encerra execução
+	syscall

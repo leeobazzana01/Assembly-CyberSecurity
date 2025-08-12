@@ -8,3 +8,6 @@ main:
 	lwc1 $f12, PI #carregue o registrador $f12 do co-processador 1
 	syscall
 	
+	li $v0, 10 #instrução 10 do syscall encerra execução
+	syscall
+	
