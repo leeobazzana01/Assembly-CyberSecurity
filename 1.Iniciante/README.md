@@ -183,3 +183,120 @@ Exemplo
 
 ## Syscalls para E/S
 (li $v0 + syscall para print_int, read_int, etc)
+
+## Exercícios 
+### Exercícios Gerais
+1. Manipulação de Registradores
+Troca de Valores
+    Carregue 15 em $t0 e 25 em $t1. Troque os valores entre $t0 e $t1 sem usar registradores adicionais (dica: use operações aritméticas).
+**DUVIDA**
+
+Uso do $zero
+    Carregue 100 em $s0. Use $zero para:
+    Mover o valor de $s0 para $s1
+    RESPOSTA: troca_valores.asm
+
+2. Operações Aritméticas
+Cálculo com Constantes
+    Calcule (37 - 15) * 2 usando apenas:
+
+    addi para constantes
+
+    sub para subtração
+
+    mul para multiplicação
+    Armazene o resultado em $t2 e imprima.
+    
+    RESPOSTA: operacoes_aritmeticas.asm
+
+Divisão com Resto
+    Leia um número do usuário em $t0. Calcule:
+
+    Quociente da divisão por 3 (armazene em $t1)
+
+    Resto da divisão (armazene em $t2)
+    Imprima ambos usando div e mfhi/mflo.
+
+    RESPOSTA: divisao_resto.asm
+
+3. Condicionais Básicas
+    Positivo/Negativo
+    Leia um número do usuário:
+
+    Se for positivo, imprima "POSITIVO"
+
+    Se negativo, imprima "NEGATIVO"
+
+    Se zero, imprima "ZERO"
+    Use slt e beq/bne.
+
+Comparação Dupla
+Leia dois números A e B:
+
+Se A > B, imprima "MAIOR"
+
+Se A < B, imprima "MENOR"
+
+Se iguais, imprima "IGUAIS"
+Use apenas slt + branches.
+
+4. Loops Simples
+Contagem Regressiva
+Imprima números de 10 a 1 em ordem decrescente:
+
+Use $t0 como contador
+
+Decremente com addi
+
+Termine quando $t0 = 0
+
+Soma de Pares
+Some os números pares de 2 a 20:
+
+Use $t0 como acumulador
+
+Incremente de 2 em 2 com addi
+
+Use ble para controlar o loop
+
+5. Funções Simples
+Dobro de um Número
+Crie uma função dobro que:
+
+Recebe argumento em $a0
+
+Retorna o dobro em $v0
+
+Chame com jal passando 7
+Imprima o resultado.
+
+Verificação de Paridade
+Implemente uma função par que:
+
+Recebe número em $a0
+
+Retorna 1 em $v0 se par, 0 se ímpar
+
+Use andi $t0, $a0, 1 (bit menos significativo)
+Teste com números 9 e 12.
+
+6. Desafios Práticos
+Múltiplo de 5
+Leia um número e verifique se é múltiplo de 5:
+
+Use div e verifique se resto = 0
+
+Imprima "SIM" ou "NAO"
+
+Potência de 2
+Leia um número n (1 ≤ n ≤ 10):
+
+Calcule 2^n usando loop com multiplicações
+
+Armazene resultado em $s0
+
+Exemplo: n=5 → 32
+
+
+
+### Exercícios de Pilhas
