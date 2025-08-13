@@ -20,8 +20,8 @@ main:
     # verificando se alguma operação diferente das válidas foi inserida
     li $t1, 1
     li $t2, 2
-    blt $s0, $t1, invalido # Se <1
-    bgt $s0, $t2, invalido # Se >2
+    blt $s0, $t1, invalido # se opcao <1
+    bgt $s0, $t2, invalido # se opcao >2
     
     #lê n1
     li $v0, 4
