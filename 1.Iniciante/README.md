@@ -229,16 +229,17 @@ Divisão com Resto
 
     Se zero, imprima "ZERO"
     Use slt e beq/bne.
+    RESPOSTA: positivo_negativo.asm
 
 Comparação Dupla
-Leia dois números A e B:
+    Leia dois números A e B:
 
-Se A > B, imprima "MAIOR"
+    Se A > B, imprima "MAIOR"
 
-Se A < B, imprima "MENOR"
+    Se A < B, imprima "MENOR"
 
-Se iguais, imprima "IGUAIS"
-Use apenas slt + branches.
+    Se iguais, imprima "IGUAIS"
+    Use apenas slt + branches.
 
 4. Loops Simples
 Contagem Regressiva
