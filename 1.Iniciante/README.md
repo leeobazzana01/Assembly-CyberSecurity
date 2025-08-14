@@ -160,8 +160,28 @@ Exemplo:
 ### Iteradores
 Para usar um registrador como variável de controle é bem simples, só preciso,  
 ## Funções em MIPS
-(jal, jr $ra, convenção de chamada)
+(jal, jr $ra, convenção de chamada).
+Para entender melhor a dinâmica, precisamos revisar o conceito de funções. Funções são blocos de código que **ESPERAM ARGUMENTOS** e **RETORNAM VALORES** a partir daqueles argumentos. Em MIPS, para trabalhar dessa forma, precisamos definir uma **lable** para a **função** e **passar um valor** (com registradores de valor, como $v0 e $v1), o endereço desse do retorno será armazenado no registrador $ra. 
+### jal lable
+**Jump and link** salta para uma função e armazena o endereço de retorno em $ra.
+### jr lable
+**Jump Register** salta para o endereço contido em $ra.
 ### j label 
+### Trabalhando com funções
+Exemplo:
+    li $a0, 5 #$a0 = 5
+	jal dobro #passa $a0 como argumento para a lable 'dobro', e armazena o endereço desse fluxo em $ra
+	 
+	move $t0, $v0 #move o valor retornado pela função para $t0
+	
+	li $v0, 1
+	move $a0, $t0
+	syscall
+	
+	dobro: 
+		mul $v0, $a0, 2
+		jr $ra 
+
 jump para saltar para uma label
 Exemplo: 
 	j fim
@@ -169,10 +189,6 @@ Exemplo:
     #encerra execução
     li $v0, 10
     syscall
-### jal lable
-**Jump and link** salta para uma função e armazena o endereço de retorno em $ra.
-### jr lable
-**Jump Register** salta para o endereço contido em $ra.
 
 ## Mnemônicos Úteis
 Alguns mnemônicos muito úteis para utlizar no dia a dia do fluxo de código:
@@ -274,16 +290,18 @@ Soma de Pares
 
     Chame com jal passando 7
     Imprima o resultado.
+    RESULTADO: funcao_dobro.asm
 
 Verificação de Paridade
-Implemente uma função par que:
+    Implemente uma função par que:
 
-Recebe número em $a0
+    Recebe número em $a0
 
-Retorna 1 em $v0 se par, 0 se ímpar
+    Retorna 1 em $v0 se par, 0 se ímpar
 
-Use andi $t0, $a0, 1 (bit menos significativo)
-Teste com números 9 e 12.
+    Use andi $t0, $a0, 1 (bit menos significativo)
+    Teste com números 9 e 12.
+    Resultado: funcao_par_impar.asm
 
 6. Desafios Práticos
 Múltiplo de 5
