@@ -240,16 +240,17 @@ Comparação Dupla
 
     Se iguais, imprima "IGUAIS"
     Use apenas slt + branches.
+    RESPOSTA: compara_inteiros.asm
 
 4. Loops Simples
 Contagem Regressiva
-Imprima números de 10 a 1 em ordem decrescente:
+    Imprima números de 10 a 1 em ordem decrescente:
 
-Use $t0 como contador
+    Use $t0 como contador
 
-Decremente com addi
+    Decremente com addi
 
-Termine quando $t0 = 0
+    Termine quando $t0 = 0
 
 Soma de Pares
 Some os números pares de 2 a 20:
