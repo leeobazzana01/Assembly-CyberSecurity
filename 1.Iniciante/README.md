@@ -305,21 +305,20 @@ Verificação de Paridade
 
 6. Desafios Práticos
 Múltiplo de 5
-Leia um número e verifique se é múltiplo de 5:
+    Leia um número e verifique se é múltiplo de 5:
 
-Use div e verifique se resto = 0
+    Use div e verifique se resto = 0
 
-Imprima "SIM" ou "NAO"
+    Imprima "SIM" ou "NAO"
 
 Potência de 2
-Leia um número n (1 ≤ n ≤ 10):
+    Leia um número n (1 ≤ n ≤ 10):
 
-Calcule 2^n usando loop com multiplicações
+    Calcule 2^n usando loop com multiplicações
 
-Armazene resultado em $s0
+    Armazene resultado em $s0
 
-Exemplo: n=5 → 32
-
-
-
+    Exemplo: n=5 → 32
+### Exercícios de Loops
+### Exercícios de Funções
 ### Exercícios de Pilhas
