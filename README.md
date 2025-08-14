@@ -52,7 +52,7 @@ source ~/.bashrc
 ```
 
 ## Conceitos de Programação com Assembly (DEVO APRENDER)
-### [1. Nivel Iniciante-Fundamentos](/home/leozin/ciencia_computacao/assembly/1.Iniciante/README.md)
+### [1. Nivel Iniciante-Fundamentos](1.Iniciante/README.md)
 
 ### [2. Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário/README.md)
 
