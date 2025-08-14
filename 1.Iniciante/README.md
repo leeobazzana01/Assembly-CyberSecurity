@@ -262,17 +262,18 @@ Soma de Pares
     Incremente de 2 em 2 com addi
 
     Use ble para controlar o loop
+    RESULTADO: soma_pares.asm
 
 5. Funções Simples
-Dobro de um Número
-Crie uma função dobro que:
+    Dobro de um Número
+    Crie uma função dobro que:
 
-Recebe argumento em $a0
+    Recebe argumento em $a0
 
-Retorna o dobro em $v0
+    Retorna o dobro em $v0
 
-Chame com jal passando 7
-Imprima o resultado.
+    Chame com jal passando 7
+    Imprima o resultado.
 
 Verificação de Paridade
 Implemente uma função par que:
