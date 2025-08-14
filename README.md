@@ -1,5 +1,5 @@
 # Assembly
-O repositório contém alguns códigos de Asssembly em uma Arquitetura 64bits usados para o aprendizados de Conceitos Básicos, porém essenciais, da Ciência da Computação, como: Variáveis, Controle de fluxo, Manipulação de memória, Funções, Strings, Estruturas de Dados.
+O repositório contém alguns códigos de Asssembly em uma Arquitetura 32bits (MIPS) usados para o aprendizados de Conceitos Básicos, porém essenciais, da Ciência da Computação, como: Variáveis, Controle de fluxo, Manipulação de memória, Funções, Strings, Estruturas de Dados.
 
 
 ## MARS MIPS Assembly Simulator - Instalação no Linux
@@ -54,15 +54,15 @@ source ~/.bashrc
 ## Conceitos de Programação com Assembly (DEVO APRENDER)
 ### [1. Nivel Iniciante-Fundamentos](1.Iniciante/README.md)
 
-### [2. Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário/README.md)
+### [2. Nível Básico-Intermediário](2.Iniciante_Intermediário/README.md)
 
-### [3. Nível Intermediário](/home/leozin/ciencia_computacao/assembly/3.Intermediário/README.md)
+### [3. Nível Intermediário](3.Intermediário/README.md)
 
-### [4. Nível Intermediário-Avançado](/home/leozin/ciencia_computacao/assembly/4.Intermediário_Avançado/README.md)
+### [4. Nível Intermediário-Avançado](4.Intermediário_Avançado/README.md)
 
-### [5. Nível Avançado](/home/leozin/ciencia_computacao/assembly/5.Avançado/README.md)
+### [5. Nível Avançado](5.Avançado/README.md)
 
-### [6. Nível Expert](/home/leozin/ciencia_computacao/assembly/6.Expert/README.md)
+### [6. Nível Expert](6.Expert/README.md)
 
 	
 ## Artigos Estudados
