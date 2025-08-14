@@ -52,17 +52,17 @@ source ~/.bashrc
 ```
 
 ## Conceitos de Programação com Assembly (DEVO APRENDER)
-### 1. [Nivel Iniciante-Fundamentos](/home/leozin/ciencia_computacao/assembly/1.Iniciante/README.md)
+### [1. Nivel Iniciante-Fundamentos](/home/leozin/ciencia_computacao/assembly/1.Iniciante/README.md)
 
-### 2. [Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário/README.md)
+### [2. Nível Básico-Intermediário](/home/leozin/ciencia_computacao/assembly/2.Iniciante_Intermediário/README.md)
 
-### 3. [Nível Intermediário](/home/leozin/ciencia_computacao/assembly/3.Intermediário/README.md)
+### [3. Nível Intermediário](/home/leozin/ciencia_computacao/assembly/3.Intermediário/README.md)
 
-### 4. [Nível Intermediário-Avançado](/home/leozin/ciencia_computacao/assembly/4.Intermediário_Avançado/README.md)
+### [4. Nível Intermediário-Avançado](/home/leozin/ciencia_computacao/assembly/4.Intermediário_Avançado/README.md)
 
-### 5. [Nível Avançado](/home/leozin/ciencia_computacao/assembly/5.Avançado/README.md)
+### [5. Nível Avançado](/home/leozin/ciencia_computacao/assembly/5.Avançado/README.md)
 
-### 6. [Nível Expert](/home/leozin/ciencia_computacao/assembly/6.Expert/README.md)
+### [6. Nível Expert](/home/leozin/ciencia_computacao/assembly/6.Expert/README.md)
 
 	
 ## Artigos Estudados
