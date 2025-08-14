@@ -173,6 +173,7 @@ Exemplo:
 **Jump and link** salta para uma função e armazena o endereço de retorno em $ra.
 ### jr lable
 **Jump Register** salta para o endereço contido em $ra.
+
 ## Mnemônicos Úteis
 Alguns mnemônicos muito úteis para utlizar no dia a dia do fluxo de código:
 ### move registradorA, registradorB
@@ -251,15 +252,16 @@ Contagem Regressiva
     Decremente com addi
 
     Termine quando $t0 = 0
+    RESPOSTA: contagem_regressiva.asm
 
 Soma de Pares
-Some os números pares de 2 a 20:
+    Some os números pares de 2 a 20:
 
-Use $t0 como acumulador
+    Use $t0 como acumulador
 
-Incremente de 2 em 2 com addi
+    Incremente de 2 em 2 com addi
 
-Use ble para controlar o loop
+    Use ble para controlar o loop
 
 5. Funções Simples
 Dobro de um Número
