@@ -320,66 +320,66 @@ Potência de 2
     Armazene resultado em $s0
 
     Exemplo: n=5 → 32
+    RESULTADO: potencia2.asm
 
 ### Exercícios de Loops e Condicionais
 1. Verificação de Número Positivo/Negativo
-Objetivo: Ler um número do usuário e imprimir:
+    Objetivo: Ler um número do usuário e imprimir:
 
-"POSITIVO" se for maior que 0.
+    "POSITIVO" se for maior que 0.
 
-"NEGATIVO" se for menor que 0.
+    "NEGATIVO" se for menor que 0.
 
-"ZERO" se for igual a 0.
-
-Técnicas: slt, beq, bne.
+    "ZERO" se for igual a 0.
 
 2. Comparação de Dois Números
-Objetivo: Ler dois números e imprimir:
+    Objetivo: Ler dois números e imprimir:
 
-"A > B" se o primeiro for maior.
+    "A > B" se o primeiro for maior.
 
-"A < B" se o segundo for maior.
+    "A < B" se o segundo for maior.
 
-"A == B" se forem iguais.
+    "A == B" se forem iguais.
 
-Técnicas: slt, beq, bne.
+    Técnicas: slt, beq, bne.
+    RESULTADO: compara_inteiros.asm
 
 3. Contagem de 1 a N
-Objetivo: Ler um número N e imprimir todos os números de 1 até N.
+    Objetivo: Ler um número N e imprimir todos os números de 1 até N.
 
-Técnicas: Loop com addi, ble/bgt.
+    Técnicas: Loop com addi, ble/bgt.
 
 4. Soma dos Números de 1 a N
-Objetivo: Calcular a soma dos números de 1 até N e imprimir o resultado.
+    Objetivo: Calcular a soma dos números de 1 até N e imprimir o resultado.
 
-Técnicas: Loop com add, addi, ble.
+    Técnicas: Loop com add, addi, ble.
 
 Nível Intermediário (Loops Aninhados e Condicionais Complexas)
-5. Verificação de Número Primo
-Objetivo: Ler um número e verificar se é primo.
+    5. Verificação de Número Primo
+    Objetivo: Ler um número e verificar se é primo.
 
-Se for primo, imprimir "PRIMO".
+    Se for primo, imprimir "PRIMO".
 
-Caso contrário, "NAO PRIMO".
+    Caso contrário, "NAO PRIMO".
 
-Técnicas: Loop com div, mfhi, beq.
+    Técnicas: Loop com div, mfhi, beq.
 
 6. Fatorial de um Número
-Objetivo: Calcular o fatorial de um número N (ex: 5! = 120).
+    Objetivo: Calcular o fatorial de um número N (ex: 5! = 120).
 
-Técnicas: Loop com mul, addi, bgt.
+    Técnicas: Loop com mul, addi, bgt.
 
 7. Sequência de Fibonacci
-Objetivo: Gerar os primeiros N termos da sequência de Fibonacci.
+    Objetivo: Gerar os primeiros N termos da sequência de Fibonacci.
 
-Exemplo: N=5 → 0, 1, 1, 2, 3.
+    Exemplo: N=5 → 0, 1, 1, 2, 3.
 
-Técnicas: Loop com add, move, ble.
+    Técnicas: Loop com add, move, ble.
 
 8. Tabuada de Multiplicação
-Objetivo: Imprimir a tabuada de um número (ex: 5 x 1 = 5, 5 x 2 = 10, ..., 5 x 10 = 50).
+    Objetivo: Imprimir a tabuada de um número (ex: 5 x 1 = 5, 5 x 2 = 10, ..., 5 x 10 = 50).
 
-Técnicas: Loop com mul, addi, ble.
+    Técnicas: Loop com mul, addi, ble.
 
 Nível Avançado (Estruturas de Controle Complexas e Otimização)
 9. Máximo Divisor Comum (MDC)
