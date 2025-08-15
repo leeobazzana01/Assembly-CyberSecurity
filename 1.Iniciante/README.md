@@ -331,6 +331,7 @@ Potência de 2
     "NEGATIVO" se for menor que 0.
 
     "ZERO" se for igual a 0.
+    RESPOSTA: positivo_negativo.asm
 
 2. Comparação de Dois Números
     Objetivo: Ler dois números e imprimir:
@@ -342,12 +343,13 @@ Potência de 2
     "A == B" se forem iguais.
 
     Técnicas: slt, beq, bne.
-    RESULTADO: compara_inteiros.asm
+    RESPOSTA: compara_inteiros.asm
 
 3. Contagem de 1 a N
     Objetivo: Ler um número N e imprimir todos os números de 1 até N.
 
     Técnicas: Loop com addi, ble/bgt.
+    RESPOSTA: zero_a_n.asm
 
 4. Soma dos Números de 1 a N
     Objetivo: Calcular a soma dos números de 1 até N e imprimir o resultado.
