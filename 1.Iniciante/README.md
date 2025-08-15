@@ -310,6 +310,7 @@ Múltiplo de 5
     Use div e verifique se resto = 0
 
     Imprima "SIM" ou "NAO"
+    RESPOSTA: multiplo5.asm
 
 Potência de 2
     Leia um número n (1 ≤ n ≤ 10):
@@ -319,6 +320,7 @@ Potência de 2
     Armazene resultado em $s0
 
     Exemplo: n=5 → 32
+
 ### Exercícios de Loops e Condicionais
 1. Verificação de Número Positivo/Negativo
 Objetivo: Ler um número do usuário e imprimir:
