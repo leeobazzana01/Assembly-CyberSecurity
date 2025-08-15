@@ -56,16 +56,16 @@ expoente_zero:
 	li $v0, 1
 	jr $ra 
 	
-expoente_negativo:	
+expoente_negativo: 
+	
 while_negativo:
 	mul $t0, $t0, 2 #$t0 = 2*2
 	add $a0, $a0, 1  # n = n+1
 	
 	bne $a0, -1, while_negativo # se n != 0, multiplica 2*2 novamente 
 	li $t1, 1
-	div $t1, $t0
+	div $t2, $t1, $t0
 	mflo $v0
-	#move $v0, $f0
 	jr $ra
 
 
