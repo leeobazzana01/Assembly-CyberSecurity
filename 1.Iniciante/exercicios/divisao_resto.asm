@@ -9,6 +9,7 @@
 	n2: .asciiz "Denominador: "
 	quociente: .asciiz "Quociente: "
 	resto: .asciiz "Resto: "
+	erro_divisao: "Não existe Divisão por Zero!!"
 .text
 .globl main
 main:
@@ -36,6 +37,7 @@ main:
 	li $v0, 5
 	syscall
 	move $t1, $v0
+	beq $t1, $zero, divisao_invalida
 
 	#calculando divisao
 	div $t0, $t1
@@ -70,8 +72,13 @@ main:
 	la $a0, newline
 	syscall
 			
-	#encerrando execução
+encerrando_execucao
 	li $v0, 10
 	syscall
 		
+divisao_invalida
+	li $v0, 4
+	la $a0, erro_divisao
+	syscall
+	j encerrando_execucao
 
