@@ -23,27 +23,25 @@ main:
 	syscall
 	move $t1, $v0
 	
-	li $t0, 0
-	
-	bgtz $t1, positivo_et
-	bltz $t1, negativo_et
-	beq $t0, $t1, zero_et
-	
-positivo_et:
+	bgtz $t1, positivo_et #branch if $t1 < $zer0
+	bltz $t1, negativo_et #branch if $t1 < $zer0
+	bqz $t1, zero_et #branch if $t1 equal zero
+
+zero_et:
 	li $v0, 4
-	la $a0, positivo
-	syscall
-	
+	la $a0, zero
+	syscall	
 	j fim
 negativo_et:
 	li $v0, 4
 	la $a0, negativo
 	syscall
-	j fim	
-zero_et:
+	j fim
+positivo_et:
 	li $v0, 4
-	la $a0, zero
-	syscall	
+	la $a0, positivo
+	syscall
+
 fim:
 	#encerra execução
 	li $v0, 10
