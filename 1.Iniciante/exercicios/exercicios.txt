@@ -8,7 +8,7 @@ Troca de Valores
 Uso do $zero
     Carregue 100 em $s0. Use $zero para:
     Mover o valor de $s0 para $s1
-    RESPOSTA: troca_valores.asm
+    RESPOSTA: troca_valores.asm (CORRETO!)
 
 2. Operações Aritméticas
 Cálculo com Constantes

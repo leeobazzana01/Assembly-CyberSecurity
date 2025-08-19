@@ -9,8 +9,8 @@ main:
 	la $a0, mensagem
 	syscall
 	
-	addi $t0, $t0, 37 #$t0 = 37
-	addi $t1, $t1, -15 #$t1 = -15
+	addi $t0, $zero, 37 #$t0 = 37
+	sub $t1, $zero, 15 #$t1 = 0-15
 	
 	add $t3, $t0, $t1 #$t3 = $t0 + $t1
 	mul $t2, $t3, 2 #$t2 = $t3 * 2
