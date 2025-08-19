@@ -39,13 +39,11 @@ negativo_et:
 	li $v0, 4
 	la $a0, negativo
 	syscall
-	
 	j fim	
 zero_et:
 	li $v0, 4
 	la $a0, zero
-	syscall
-	j fim	
+	syscall	
 fim:
 	#encerra execução
 	li $v0, 10
