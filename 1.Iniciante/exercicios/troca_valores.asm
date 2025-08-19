@@ -9,8 +9,7 @@
 .globl main
 main:
 	#armazena 100 em s0
-	li $t0, 100
-	sw $s0, 0($t0)
+	li $s0, 100
 	
 	#cabeçalho
 	li $v0, 4
@@ -33,7 +32,7 @@ main:
 	syscall
 	
 	add $s1, $zero, $s0 #$s1 = $zero + $s0
-	sub $s0, $s0, $s0 #$s0 = $s0 - $s0
+	sub $s0, $zero, $zero #$s0 = $zero - $zero #isso irá fazer com que $s0 seja igual a zero
 	
 	#msg valor $s1
 	li $v0, 4
@@ -63,6 +62,8 @@ main:
 	#encerrando execução 
 	li $v0, 10
 	syscall
+
+  
 	
 	  
 	
