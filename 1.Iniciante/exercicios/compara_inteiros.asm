@@ -4,9 +4,9 @@
 	cabecalho: .asciiz "Comparando dois números\n"
 	newline: .asciiz "\n"
 	input: .asciiz "Numero: "
-	b_maior: .asciiz "Segundo numero maior que primeiro!!!"
-	a_maior: .asciiz "Primeiro numero maior que segundo!!!"
-	iguais: .asciiz "Valores Iguais!!!"
+	b_maior: .asciiz "MENOR!!!"
+	a_maior: .asciiz "MAIOR!!!"
+	iguais: .asciiz "IGUAIS!!!"
 .text
 .globl main
 main:
@@ -46,7 +46,7 @@ primeiro_maior:
 	j fim
 	
 segundo_maior:
-	li $t0, 4
+	li $v0, 4
 	la $a0, b_maior
 	syscall
 	j fim
