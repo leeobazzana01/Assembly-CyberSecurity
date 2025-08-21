@@ -17,8 +17,9 @@ main:
 	
 	#$t0 = $zero + 10
 	add $t0, $zero, 10
+	add $t2, $zero, 1
 while: 
-	bgtz $t0, imprime_contador #se $t0 > 0, salta p imprime_contador
+	bge $t0, $t2, imprime_contador #enquanto $t0 >= $t2, salta p imprime_contador
 
 encerra_execucao:
 	li $v0, 10
@@ -33,6 +34,14 @@ imprime_contador:
 	la $a0, newline
 	syscall
 
-	#i--
-	addi $t0, $t0, -1	
+	#$t0--
+	addi $t0, $t0, -1
+	
+	#sleep 1000 milisegundos (1 segundo)
+	li $t1, 1000
+	
+	li $v0, 32
+	move $a0, $t1
+	syscall
+			
 	j while	
