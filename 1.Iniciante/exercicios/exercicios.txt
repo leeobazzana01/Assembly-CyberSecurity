@@ -21,7 +21,7 @@ Cálculo com Constantes
     mul para multiplicação
     Armazene o resultado em $t2 e imprima.
     
-    RESPOSTA: operacoes_aritmeticas.asm
+    RESPOSTA: operacoes_aritmeticas.asm(CORRETO!)
 
 Divisão com Resto
     Leia um número do usuário em $t0. Calcule:
@@ -31,7 +31,7 @@ Divisão com Resto
     Resto da divisão (armazene em $t2)
     Imprima ambos usando div e mfhi/mflo.
 
-    RESPOSTA: divisao_resto.asm
+    RESPOSTA: divisao_resto.asm(CORRETO!)
 
 3. Condicionais Básicas
     Positivo/Negativo
@@ -43,7 +43,7 @@ Divisão com Resto
 
     Se zero, imprima "ZERO"
     Use slt e beq/bne.
-    RESPOSTA: positivo_negativo.asm
+    RESPOSTA: positivo_negativo.asm(CORRETO!)
 
 Comparação Dupla
     Leia dois números A e B:
@@ -54,7 +54,7 @@ Comparação Dupla
 
     Se iguais, imprima "IGUAIS"
     Use apenas slt + branches.
-    RESPOSTA: compara_inteiros.asm
+    RESPOSTA: compara_inteiros.asm(CORRETO!)
 
 4. Loops Simples
 Contagem Regressiva
@@ -65,7 +65,7 @@ Contagem Regressiva
     Decremente com addi
 
     Termine quando $t0 = 0
-    RESPOSTA: contagem_regressiva.asm
+    RESPOSTA: contagem_regressiva.asm(CORRETO!)
 
 Soma de Pares
     Some os números pares de 2 a 20:
@@ -75,7 +75,7 @@ Soma de Pares
     Incremente de 2 em 2 com addi
 
     Use ble para controlar o loop
-    RESULTADO: soma_pares.asm
+    RESULTADO: soma_pares.asm(CORRETO!)
 
 5. Funções Simples
     Dobro de um Número
@@ -87,7 +87,7 @@ Soma de Pares
 
     Chame com jal passando 7
     Imprima o resultado.
-    RESULTADO: funcao_dobro.asm
+    RESULTADO: funcao_dobro.asm(CORRETO!)
 
 Verificação de Paridade
     Implemente uma função par que:

@@ -62,6 +62,8 @@ Carrega em $t0 o valor da memória no endereço ($s1 + 8)
 Armazena em $destino o valor binário que está no registrador $base no offset citado. Exemplo:
 #### sw $s0, 0($t0)
 Armazenamos no registrador $s0 o valor que está em $t0 no offset 0(início).
+#### sw $v0, label
+Armazena o valor, provavelmente lido, de $v0 na label específica.
 ### li $destino, label
 **Carrega para um registrador** o valor binário armazenado em uma label. Além disso, pode ser usado para carregar um valor inteiro para um registrador, como por exemplo: 
 **li $t1, 1**
