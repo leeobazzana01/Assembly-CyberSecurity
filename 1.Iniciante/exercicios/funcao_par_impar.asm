@@ -48,11 +48,11 @@ encerrando_execucao:
 	syscall
 	
 paridade:
-	li $t0, 2
+	addi $t0, $zero, 2
 	div $a0, $t0
 	mfhi $t1    #move o resto do registrador HI para $t1
 	beq $t1, 0, par
-	beq $t1, 1, impar 
+	beq $t1, 1, impar
 	
 par:
 	li $v0, 0

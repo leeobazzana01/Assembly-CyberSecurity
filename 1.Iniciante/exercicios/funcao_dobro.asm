@@ -30,8 +30,8 @@ encerra_execucao:
 	li $v0, 10
 	syscall
 dobro:
-	li $t0, 2 #$t0 = 2
-	mul $v0, $a0, $t0 #$v0 = 7 * 2 ->VALOR q a função retorna é a multiplicação do argumento pela constante
+	#li $t0, 2 #$t0 = 2
+	mul $v0, $a0, 2 #$v0 = 7 * 2 ->VALOR q a função retorna é a multiplicação do argumento pela constante
 	jr $ra #volta para o registrador $ra 
 	
 
