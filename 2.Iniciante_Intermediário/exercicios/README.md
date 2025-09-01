@@ -5,9 +5,12 @@ RESPOSTA: vetor_impares.asm
 
 ## Iteração Simples
 Declare um vetor de 10 inteiros inicializados com 0. Use um loop para preenchê-lo com valores de 1 a 10. Armazene cada elemento usando sw.
+Resposta: vetor1ao10.asm
 
 ## Acesso com Índice Variável
 Declare um vetor de 8 palavras. Peça ao usuário um índice (0-7) e exiba o valor correspondente. Use sll para calcular o offset.
+Código: vetor_palavras.asm (correto)
+
 # Nível Intermediário
 ## Strings: Contagem de Caracteres
 Declare uma string .asciiz "Hello!". Conte quantos caracteres ela tem (excluindo o \0), percorrendo-a byte a byte até encontrar o terminador nulo.
