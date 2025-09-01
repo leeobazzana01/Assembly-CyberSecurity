@@ -14,6 +14,8 @@ Código: vetor_palavras.asm (correto)
 # Nível Intermediário
 ## Strings: Contagem de Caracteres
 Declare uma string .asciiz "Hello!". Conte quantos caracteres ela tem (excluindo o \0), percorrendo-a byte a byte até encontrar o terminador nulo.
+Resposta: contagem_string.asm
+
 ## Strings: Inversão
 Leia uma string do usuário (máx. 100 chars) e inverta seus caracteres (sem usar um segundo vetor). Exiba o resultado.
 ## Structs: Acesso a Campos
