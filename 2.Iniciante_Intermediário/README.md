@@ -58,3 +58,12 @@ No código acima, declaramos um **vetor de inteiros**. Carregamos o **endereço 
 
 ### Bubble Sort
 (aninhamento de loops com comparações)
+Bubble Sort é um Algoritmo de Ordenação que trabalha da seguinte forma: dado um vetor de inteiros, por exemplo, ele compara o índice atual sempre com o próximo para verificar. Se o índice atual for menor, há troca de valores. Por exemplo:
+
+Vetor V = 20, 10, 15
+
+I - Primeira execução (20 > 10, troca)
+V = 10, 20, 15
+II - Segunda execução (20 > 15, troca)
+V = 10, 15, 20
+III - Percorre o vetor novamente, se não houver nenhuma troca, encerra o BubbleSort.

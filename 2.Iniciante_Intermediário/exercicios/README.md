@@ -25,6 +25,8 @@ Implemente a busca linear em um vetor de 10 inteiros. Retorne 1 em $v0 se o elem
 # Nível Avançado
 ## Bubble Sort
 Ordene um vetor de 10 inteiros (lidos do usuário ou definidos em .data) usando o algoritmo Bubble Sort. Use dois loops aninhados e comparações com lw/sw.
+Resposta: bubblesort.asm
+
 ## Strings: Conversão para Maiúsculas
 Leia uma string do usuário e converta todos os caracteres minúsculos para maiúsculos. Ignore caracteres não alfabéticos. Dica: Subtraia 32 de bytes no intervalo 'a'-'z'.
 ## Structs com Vetores
