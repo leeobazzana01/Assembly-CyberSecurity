@@ -67,3 +67,5 @@ V = 10, 20, 15
 II - Segunda execução (20 > 15, troca)
 V = 10, 15, 20
 III - Percorre o vetor novamente, se não houver nenhuma troca, encerra o BubbleSort.
+
+Não é o Algoritmo de ordenação mais eficiente pois 

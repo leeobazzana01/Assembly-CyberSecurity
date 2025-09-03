@@ -2,7 +2,9 @@
 	vetor: .word 45, 32, 20, 98, 12, 34, 55, 96, 13, 9
 	header: .asciiz "Ordenando um Vetor de Inteiros com BubbleSort\n"
 	msg_execucao: .asciiz "Execucao "
+	msg_inicio: .asciiz "Vetor Inicial: "
 	newline: .asciiz "\n"
+	tab: .asciiz "\t"
 .text
 .globl main
 main:
@@ -15,66 +17,71 @@ main:
 	syscall
 
 	la $s0, vetor
-	li $s1, 0 #n trocas no bubblesort 
-	li $t0, 0 #contador		
-bubble_sort: 
-	add $t1, $t0, 1 # $t1 = contador + 1
-	
-	#deslocamento a[n]
-	sll $t2, $t0, 2
-	add $t3, $t2, $s0
-	
-	#deslocamento a[n+1]
-	sll $t2, $t1, 2
-	add $t4, $t2, $s0
-	
-	#comparacao 
-	lw $s2, 0($t3)
-	lw $s3, 0($t4)
-	
-	#se a[n] > a[n+1], troco os valores
-	bgt $s2, $s3, troca_valores
-	
-	#se não, adiciono 1 ao contador
-	addi $t0, $t0, 1
-	
-	j bubblesort
-	
-	
-troca_valores:
-	addi $s1, $s1, 1 #mudanças + 1
-	
-	move $t5, $s2
-	move $t6 $s3
-	
-	li $s2, $t6
-	li $s3, $t5
-	
-	#imprimindo os valores do array
 	li $t0, 0 #contador
-	la $t1, vetor
-imprimindo_valores:
-	sll $t3, $t0, 2 #deslocar o contador 2 vezes p esquerda p multiplicar por 4
-	add $t4, $t3, $t1 #adicionar o deslocamento ao vetor
-	 
-	lw $t2, 0($t4)
+
+imprime_vetor:	
+	sll $t1, $t0, 2 #deslocamento = contador * 4
+	add $t2, $t1, $s0
+	
+	#carregando
+	lw $s1, 0($t2)
 	
 	li $v0, 1
-	move $a0, $t2
+	move $a0, $s1
 	syscall
 	
+	#\t 
+	li $v0, 4
+	la $a0, tab
+	syscall
+	 
+	addi $t0, $t0, 1 #contador ++
+	bne $t0, 11, imprime_vetor #enquanto contador < 11, imprime o próx elemento
+	 
+	#\n 
 	li $v0, 4
 	la $a0, newline
 	syscall
 	
-	add $t0, $t0, 1 # $t0 += 1
-	bne $t0, 11, imprimindo_valores
-	
-	j bubblesort
+	move $a0, $s0
+	li $a1, 0 #contador
+	addi $a2, $a1, 1
+	jal bubblesort
 	
 encerrando_execucao:
 	li $v0, 10
 	syscall
 	
 
+bubblesort:
+	#$a0 = vetor
+	#$a1 = contador (0)
+	#$a2 = contador + 1
+	li $s1, 0 #mudanças no array
+	
+	#a[n]
+	sll $t3, $a1, 2 #deslocamento
+	add $t4, $a0, $t3
+	
+	#a[n+1]
+	sll $t5, $a2, 2 #deslocamento
+	add $t6, $a0, $t5
+	
+troca_posicao:
+	#se a[n] > a[n + 1] trocamos
+	bgt $t4, $t6, altera_array
+
+atualiza_bubblesort:
+	addi $
+	
+	
+	
+altera_array: 
+	move $t8, $t4
+	move $t9, $t6
+	
+	li $t
+	
+	
+	
 	
