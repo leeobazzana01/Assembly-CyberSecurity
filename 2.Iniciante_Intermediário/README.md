@@ -49,6 +49,9 @@ No código acima, declaramos um **vetor de inteiros**. Carregamos o **endereço 
 ## Strings
 (la para endereços, manipulação byte-a-byte)
 
+## Arquivos
+(Abrir arquivos, fechar, manipular arquivos)
+
 ## Structs
 (Layout na memória, acesso a campos via offset)
 
@@ -68,4 +71,49 @@ II - Segunda execução (20 > 15, troca)
 V = 10, 15, 20
 III - Percorre o vetor novamente, se não houver nenhuma troca, encerra o BubbleSort.
 
-Não é o Algoritmo de ordenação mais eficiente pois 
+Não é o Algoritmo de ordenação mais eficiente pois, no pior dos casos, sua complexidade será de **O(n²)**. É bem simples de entender. Imagine que temos um vetor de n elementos para ordenar. O bubblesort irá percorrer esse vetor n vezes. Em cada passagem, ele compara n elementos (por isso será n²). 
+
+EXEMPLO DE CÓDIGO BUBBLESORT EM ASSEMBLY MIPS:
+```
+.data
+array: .word 5, 3, 8, 1, 2  # Array a ser ordenado
+size: .word 5                # Tamanho do array
+
+.text
+.globl main
+
+main:
+    la $s0, array        # Carrega endereço do array em $s0
+    lw $s1, size         # Carrega tamanho do array em $s1
+    addi $t0, $zero, 0   # Inicializa contador externo (i)
+
+outer_loop:
+    addi $t1, $zero, 0   # Inicializa contador interno (j)
+    addi $t2, $s1, -1    # n-1
+    sub $t2, $t2, $t0    # n-i-1
+
+inner_loop:
+    sll $t3, $t1, 2      # Multiplica j por 4 (offset)
+    add $t3, $s0, $t3    # Endereço de array[j]
+    lw $t4, 0($t3)       # Carrega array[j]
+    lw $t5, 4($t3)       # Carrega array[j+1]
+    
+    ble $t4, $t5, no_swap # Se array[j] <= array[j+1], pula
+    
+    # Swap dos elementos
+    sw $t5, 0($t3)       # Armazena array[j+1] em array[j]
+    sw $t4, 4($t3)       # Armazena array[j] em array[j+1]
+
+no_swap:
+    addi $t1, $t1, 1     # j++
+    blt $t1, $t2, inner_loop # Se j < (n-i-1), repete inner_loop
+
+    addi $t0, $t0, 1     # i++
+    addi $t6, $s1, -1    # n-1
+    blt $t0, $t6, outer_loop # Se i < (n-1), repete outer_loop
+
+end:
+    # Exit program
+    li $v0, 10
+    syscall
+```
