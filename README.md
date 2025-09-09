@@ -1,5 +1,6 @@
-# Assembly
-O repositório contém alguns códigos de Asssembly em uma Arquitetura 32bits (MIPS) usados para o aprendizados de Conceitos Básicos, porém essenciais, da Ciência da Computação, como: Variáveis, Controle de fluxo, Manipulação de memória, Funções, Strings, Estruturas de Dados.
+# CiberSecurity Assembly
+Com foco no aprendizado de Assembly no Microprocessador Mips de 32 bits, o repositório aborda desde os conceitos básicos e fundamentais como lógica de programação, Manipulação de Dados na Memória, Alocação Dinâmica, Algoritmos fundamentais, até a Engenharia Reversa e desmontagem de Binários, Vulnerabilidades de Memória, entre outros tópicos essenciais em Cyber. 
+O Objetivo do repositório e dar uma boa base aos leitores e um bom entendimento com base em projetos e códigos desenvolvidos.  
 
 
 ## MARS MIPS Assembly Simulator - Instalação no Linux
@@ -52,17 +53,17 @@ source ~/.bashrc
 ```
 
 ## Roadmap de Programação com Assembly 
-### [1. Nivel Iniciante-Fundamentos](1.Iniciante/README.md)
+### [1. Registradores e fluxo.](1.Básico/README.md)
 
-### [2. Nível Básico-Intermediário](2.Iniciante_Intermediário/README.md)
+### [2. Memória e pilha.](2.Intermediário%20I/README.md)
 
-### [3. Nível Intermediário](3.Intermediário/README.md)
+### [3. Funções e chamadas.](3.Intermediário%20II/README.md)
 
-### [4. Nível Intermediário-Avançado](4.Intermediário_Avançado/README.md)
+### [4. Loops e condições.](4.Avançado%20I/README.md)
 
-### [5. Nível Avançado](5.Avançado/README.md)
+### [5. Segurança e exploits.](5.Avançado%20II/README.md)
 
-### [6. Nível Expert](6.Expert/README.md)
+### [6. Reversão e malware.](6.Expert/README.md)
 
 	
 ## Artigos Estudados
