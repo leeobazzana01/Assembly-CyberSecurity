@@ -1,4 +1,6 @@
 # Intermediário I
+## Arquivos
+(Abrir, ler, modificar, salvar)
 
 ## Organização da Memória
 (stack, heap, data, text)
