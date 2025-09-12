@@ -1,6 +1,19 @@
 # Intermediário I
 ## Arquivos
-(Abrir, ler, modificar, salvar)
+Para trabalhar com arquivos, precisamos executar algumas etapas de manipulação de arquivos, que são:
+    1. Abrir **Syscall 13**
+    2. Ler **Syscall 14**
+    3. Escrever **Syscall 15**
+    4. Fechar  **Syscall 16**
+Além disso, teremos que declarar um **buffer** na seção de dados do código. Esse buffer será um **espaço reservado na memória** que irá **armazenar a string contida no arquivo. 
+
+### Abertura de Arquivos
+O **Syscall 13** exige alguns argumentos:
+    **$a0**: **Endereço** do arquivo
+    **$a1**: **Modo de abertura** (**Leitura = 0, Escrita = 1, 9 = append**)
+    **$a2**: **Permissões** (ignorado para arquivos conhecidos)
+
+
 
 ## Organização da Memória
 (stack, heap, data, text)

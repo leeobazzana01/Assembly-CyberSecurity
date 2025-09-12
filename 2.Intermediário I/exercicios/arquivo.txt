@@ -1,1 +1,69 @@
-Os algoritmos sao fundamentais na Ciencia da Computacao pois permitem resolver problemas de forma estruturada e eficiente. Entre eles destacam se as pilhas, estruturas de dados que seguem a logica LIFO Last In First Out, utilizadas em situacoes como desfazer acoes em editores ou avaliar expressoes matematicas. Ja os algoritmos de ordenacao, como Bubble Sort, QuickSort e MergeSort, organizam dados para facilitar buscas e analises, sendo cruciais em aplicacoes que lidam com grandes volumes de informacao. As arvores, por sua vez, representam relacoes hierarquicas, permitindo armazenar e acessar dados de maneira otimizada, como em sistemas de arquivos e bancos de dados. O estudo e a implementacao desses algoritmos desenvolvem o raciocinio logico, aprimoram a eficiencia de programas e constituem a base para areas mais complexas da computacao, como inteligencia artificial e analise de dados.
+Assembly MIPS e manipulação de memória — explicação simples
+
+Assembly MIPS é uma linguagem de baixo nível usada para programar processadores que seguem a arquitetura MIPS. Em assembly, o programador trabalha com instruções muito próximas ao hardware: registradores (pequenos espaços rápidos de armazenamento dentro do processador), endereços de memória, pilha (stack) e operações de carregamento/armazenamento (load/store). Por ser tão “próxima ao metal”, entender assembly dá uma visão clara de como o código se comporta na memória.
+
+Como a manipulação de memória vira uma oportunidade para invasores (visão geral)
+
+Programas em C/C++ e outras linguagens de baixo nível usam memória de forma explícita: alocam buffers, fazem cópias de bytes e acessam posições de memória por endereço. Quando o código não valida tamanhos, índices ou referências, surgem vulnerabilidades de memória. Um invasor com esse conhecimento pode, em teoria, manipular o estado do programa para conseguir comportamentos não previstos — por exemplo:
+
+Corrupção de pilha (stack): se um programa copia dados para um buffer sem checar o tamanho, dados extras podem sobrescrever variáveis locais, registradores salvos ou o endereço de retorno da função. Alterando o endereço de retorno, o fluxo de execução pode ser desviado.
+
+Corrupção do heap: bugs na gestão de memória dinâmica (malloc/free) podem permitir que um invasor corrompa metadados de alocação ou ponteiros, levando a leituras/escritas em locais indevidos.
+
+Use-after-free e dangling pointers: acessar memória já liberada pode permitir manipular dados controláveis posteriormente.
+
+Format string e integer overflow: erros de interpretação de entrada ou cálculos sem checagem podem causar leitura/escrita fora dos limites esperados.
+
+Em termos de assembly MIPS, um atacante que entenda como o programa manipula registradores, a pilha e endereços consegue imaginar onde na memória esses erros aparecem e qual efeito teriam sobre o fluxo do programa. Porém, conhecer o conceito não é o mesmo que dar instruções para explorar — aqui explicamos só o raciocínio.
+
+O que um “hacker” conceptualmente faz (sem detalhes)
+
+Observa o binário: entende como funções usam a pilha, quais registradores são salvos, e como a memória é acessada.
+
+Identifica pontos fracos: locais onde dados do usuário entram no programa sem validação (buffers, inputs formatados, etc).
+
+Tenta manipular o estado: a ideia geral é forçar o programa a ler/escrever onde não deveria, quer para causar falha, quer para alterar o fluxo de execução.
+
+Explora mitigadores/no ambiente: sistemas modernos têm proteções (ASLR, NX, canários de pilha); um atacante precisa contornar ou trabalhar com essas restrições — isso é complexo e depende do sistema alvo.
+
+Insisto: esse é o panorama conceitual — não inclui comandos, endereços, nem passos práticos para realizar um ataque.
+
+Por que entender isso é útil (para defesa)
+
+Conhecer assembly e manipulação de memória é essencial para:
+
+escrever código seguro (evitar cópias inseguras, checar tamanhos, tratar erros),
+
+revisar/inspecionar binários e detectar bugs,
+
+criar testes e fuzzers que tentem inputs inesperados,
+
+aplicar e configurar mitigadores (ASLR, NX, canários, compiladores com proteção),
+
+responder incidentes entendendo como um exploit pode ter sido usado.
+
+Boas práticas e mitigação (resumo)
+
+validar todos os inputs e checar limites antes de copiar/usar dados;
+
+preferir linguagens que fazem verificação de limites quando possível;
+
+habilitar proteções no compilador e sistema (stack canaries, PIE/ASLR, NX/DEP);
+
+usar ferramentas de análise estática/dinâmica e fuzz testing para encontrar bugs;
+
+revisar e testar gerenciamento de memória (alocações e frees);
+
+aplicar princípios de menor privilégio e isolamento.
+
+Aprender eticamente
+
+Se o seu objetivo é estudar segurança e assembly, direcione o aprendizado para atividades legais e éticas:
+
+laboratórios e máquinas virtuais isoladas (CTFs, ambientes de prática),
+
+cursos de segurança ofensiva defensiva que enfatizem ética,
+
+análise de malware apenas em ambientes controlados,
+
+contribuir com correções (patches) e divulgação responsável quando descobrir vulnerabilidades.
