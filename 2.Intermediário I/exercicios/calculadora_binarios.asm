@@ -4,6 +4,7 @@
 	msg_operacoes: .asciiz "Operações Disponíveis: \nSoma: (+)\nSubtração: (-)\nMultiplicação: (*)\nDivisão: (/)\n"
 	newline: .asciiz "\n"
 	vetor_n1: .space 32
+	vetor_n2: .space 32
 	
 .text
 .globl main
@@ -18,7 +19,7 @@ main:
 	la $a0, msg_operacoes
 	syscall
 		
-	#header
+	#solicita n[1]
 	li $v0, 4
 	la $a0, msg_numero
 	syscall	
@@ -30,39 +31,39 @@ main:
 	move $a0, $v0
 
 	jal converte_binario
+	move $s0, $v0 #n1 está em $s0
 	
+		
 encerra_execucao:
 	li $v0, 10
 	syscall
 	
 converte_binario:
-	#carregando o contador de loops
-	li $t1, 0
-	#quantiadade de loops
-	li $t2, 7
+	#contador de execuções 
+	li $t0, 0 
 	
-	#a[0] do vetor está em s0
-	la $t0, vetor_n1
-	lw $s0, 0($t0)
+	#contador total
+	li $t1, 7
+	
+	#onde será colocado o bit do resto
+	sub $t3, $t0, $t1
+	
+	#deslocamento
+	la $s2, vetor_n1
+	sll $
+	
+	  
+	#divisor
+	li $t2, 2
+	
+	div $a0, $t2 
+	
+	mfhi 
+	mflo $a0 
+	
+	
+	
 
-	#numero inteiro está em $t3
-	move $t3, $a0
-		
-	bne $t1, $t2, divisoes_sucessivas
-	
-	move $v0, 
-	jr $ra
-
-
-divisoes_sucessivas:
-	li $t4, 2
-	
-	div $t3, $t4
-	
-	mflo $t3
-	mf
-	
-	beq $t1, $t2, converte_binario 	
 	
 	
 	

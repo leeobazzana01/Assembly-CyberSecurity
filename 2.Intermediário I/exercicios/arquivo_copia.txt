@@ -1,0 +1,7 @@
+Assembly MIPS e manipulação de memória — explicação simples
+
+Assembly MIPS é uma linguagem de baixo nível usada para programar processadores que seguem a arquitetura MIPS. Em assembly, o programador trabalha com instruções muito próximas ao hardware: registradores (pequenos espaços rápidos de armazenamento dentro do processador), endereços de memória, pilha (stack) e operações de carregamento/armazenamento (load/store). Por ser tão “próxima ao metal”, entender assembly dá uma visão clara de como o código se comporta na memória.
+
+Como a manipulação de memória vira uma oportunidade para invasores (visão geral)
+
+Programas em C/C++ e outras linguagens de baixo nível usam memória de forma explícita: alocam buffers, fazem cópias de bytes e acessam posições de memória por endereço. Quando o código não valida tamanhos, índices ou referências, surgem vulnerabilidades de memória. Um invasor com esse conhecimento pode, em teoria, manipular o estado do programa para conseguir

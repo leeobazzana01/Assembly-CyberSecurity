@@ -36,6 +36,9 @@ Em um vetor de 20 inteiros, conte quantas vezes um elemento fornecido pelo usuá
 ## Inserção em Vetor Ordenado
 Mantenha um vetor ordenado de 15 inteiros. Insira um novo elemento fornecido pelo usuário na posição correta, deslocando os elementos existentes.
 
+## DESAFIO
+## Calculadora de Binários
+Fazer uma calculadora que peça dois números em decimal ao usuário, peça também uma operação, e realize todas as operações binárias de soma, subtração, divisão, multiplicação. Os números devem ser armazenados em vetores de 8 bits.
 
 ## Dicas Gerais
 Use la para carregar endereços de vetores/strings.

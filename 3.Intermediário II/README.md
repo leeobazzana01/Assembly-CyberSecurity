@@ -11,7 +11,7 @@
 ## Recursão
 (Uso da pilha para $ra e argumentos)
 
-## Algoritmos Intermediários
+## Algoritmos Intermediári  os
 ### Insertion Sort
 (manipulação de ponteiros na memória)
 

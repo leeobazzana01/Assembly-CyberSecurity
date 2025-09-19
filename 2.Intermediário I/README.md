@@ -1,18 +1,26 @@
 # Intermediário I
 ## Arquivos
-Para trabalhar com arquivos, precisamos executar algumas etapas de manipulação de arquivos, que são:
-    1. Abrir **Syscall 13**
-    2. Ler **Syscall 14**
-    3. Escrever **Syscall 15**
-    4. Fechar  **Syscall 16**
-Além disso, teremos que declarar um **buffer** na seção de dados do código. Esse buffer será um **espaço reservado na memória** que irá **armazenar a string contida no arquivo. 
 
-### Abertura de Arquivos
-O **Syscall 13** exige alguns argumentos:
-    **$a0**: **Endereço** do arquivo
-    **$a1**: **Modo de abertura** (**Leitura = 0, Escrita = 1, 9 = append**)
-    **$a2**: **Permissões** (ignorado para arquivos conhecidos)
+### Syscalls para Manipulação de Arquivos
 
+**Syscall	    Descrição   	Argumentos**
+13	          Abrir arquivo	    $a0 = endereço do nome do arquivo
+                                $a1 = modo (0 leitura, 1 escrita, 9 append)
+                                $a2 = permissões (geralmente 0)
+
+14	           Ler arquivo  	$a0 = descritor do arquivo (não o endereço!)
+                                $a1 = endereço do buffer
+                                $a2 = número de bytes a ler
+
+15	           Escrever        	$a0 = descritor do arquivo
+                                $a1 = endereço do buffer de escrita
+                                $a2 = número de bytes a escrever
+
+16	         Fechar arquivo	    $a0 = descritor do arquivo
+
+Além das syscall acima, é muito importante também **ENCAMINHAR O PATH CORRETO** do arquivo, usando sempre **//** onde tiver uma barra. Exemplo:
+.data
+    arquivo: .asciiz "//home//leozin//ciencia_computacao//assembly//2.Intermediário I//exercicios//arquivo.txt" #endereço do arquivo
 
 
 ## Organização da Memória
@@ -30,7 +38,7 @@ Uma cozinha tem que lavar vários pratos sujos pela casa. Primeiro, a cozinheira
 **Registradores usados: $sp e $fp**.
 A pilha na memória cresce para baixo. Então, nós somamos um valor negativo ao **$sp** para ele liberar espaço na memória para a pilha. Em seguida, iremos empilhar os valores na memória de forma a fazer a operação desejada, e depois desempilhar. Exemplo:
 
-```asm
+```assembly
 func:
 #alocando memória
 addi $sp, $sp, -12
@@ -54,9 +62,6 @@ lw $t1, 8($sp)
 #free de memória
 addi $sp, $sp, 12
 ```
-
-## Syscalls em MIPS
-(E/S, alocação)
 
 ## Arrays e Strings
 (offsets, alinhamento word)
