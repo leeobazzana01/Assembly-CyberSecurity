@@ -1,11 +1,11 @@
 # Nível Básico
 ## Declaração e Acesso a Vetores
 Declare um vetor de 5 inteiros com valores {1, 3, 5, 7, 9}. Carregue o terceiro elemento (índice 2) em $t0 usando offset fixo (ex: 8($s0)).
-RESPOSTA: vetor_impares.asm
+RESPOSTA: vetor_impares.asm 
 
 ## Iteração Simples
 Declare um vetor de 10 inteiros inicializados com 0. Use um loop para preenchê-lo com valores de 1 a 10. Armazene cada elemento usando sw.
-Resposta: vetor1ao10.asm
+Resposta: 
 
 ## Acesso com Índice Variável
 Declare um vetor de 8 palavras. Peça ao usuário um índice (0-7) e exiba o valor correspondente. Use sll para calcular o offset.

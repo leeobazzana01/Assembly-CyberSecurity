@@ -25,6 +25,11 @@ Além das syscall acima, é muito importante também **ENCAMINHAR O PATH CORRETO
 
 ## Organização da Memória
 (stack, heap, data, text)
+Em assembly, temos alguns segmentos que **estruturam o código do nosso programa.** Exemplo:
+**.text**: código do nosso programa.
+**.data**: seção onde declaramos as variáveis do programa.
+**heap**: Área de memória **alocada dinamicamente**. Cresce para cima (para endereços maiores). Persiste até ser liberada.
+**stack**: região da memória que armazena funções, variáveis, entre outros, usando o princípio do **Algoritmo de Pilha** (empilhar e desempilhar). **Cresce para baixo, para endereços menores**. Usa o princípio LIFO (**last in, first out**)
 
 ## Pilha
 (uso de $sp, $fp, $ra)
@@ -114,3 +119,46 @@ No código acima, declaramos um **vetor de inteiros**. Carregamos o **endereço 
 
 ## Structs Simples em Memória
 (layout, padding, acesso por offsets)
+Uma  **struct** é uma **estrutura de dados** bastante simples, onde podemos criar um formato de dado que armazena vários tipos de dados diferentes que são as características desse dado. Por exemplo, a **struct pessoa em C**:
+```C
+struct Pessoa{
+    int idade;
+    int altura;
+    char codigo;
+};
+```
+
+Em Assembly, o que iremos fazer é **reservar espaço na memória para a struct** e depois **calcular os offsets e paddings**. Como exemplo, basta adotar o código abaixo: 
+```Assembly
+
+.data
+    pessoa: .space 12 #reservando 12 bytes para a struct pessoa 
+    header: .asciiz "Preenchendo os dados da struct\n"
+.text
+.globl main
+main:
+    li $v0, 4
+    la $a0, header
+    syscall
+
+    la $t0, pessoa
+
+    #atribuindo valores para os campos da struct
+    li $t1, 23
+    lw $t1, 0($t0)
+
+    li $t2, 170
+    l2 $t2, 4($t0)
+
+    li $t3, 'A'
+    sb $t3, 8($t0)
+
+    #ler valores dos campos
+    lw $t2, 0($t0)      # $t2 = pessoa.idade
+    lw $t3, 4($t0)      # $t3 = pessoa.altura
+    lb $t4, 8($t0)      # $t4 = pessoa.codigo
+
+encerra_execucao:
+    li $v0, 10
+    syscall
+```

@@ -1,5 +1,5 @@
-# CiberSecurity Assembly
-Com foco no aprendizado de Assembly no Microprocessador Mips de 32 bits, o repositório aborda desde os conceitos básicos e fundamentais como lógica de programação, Manipulação de Dados na Memória, Alocação Dinâmica, Algoritmos fundamentais, até a Engenharia Reversa e desmontagem de Binários, Vulnerabilidades de Memória, entre outros tópicos essenciais em Cyber. 
+# Assembly 
+Com foco no aprendizado de Assembly no Microprocessador Mips de 32 bits, o repositório aborda desde os conceitos básicos e fundamentais como lógica de programação, Manipulação de Dados na Memória, Alocação Dinâmica, Algoritmos fundamentais, até a Engenharia Reversa e desmontagem de Binários, Vulnerabilidades de Memória, entre outros tópicos essenciais. 
 O Objetivo do repositório e dar uma boa base aos leitores e um bom entendimento com base em projetos e códigos desenvolvidos.  
 
 

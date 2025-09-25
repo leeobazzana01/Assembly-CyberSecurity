@@ -2,11 +2,12 @@
 # Carregue o terceiro elemento (índice 2) em $t0 usando offset fixo (ex: 8($s0)).
 
 .data
-     vetor_impares: .word 1, 3, 5, 7, 9
-     header: .asciiz "Acessando o terceiro elemento do Vetor\n"
-     opcao_solucao: .asciiz "Selecione uma opção de solução: \n1.Simples \n2.Complexa\n"
-     msg_valor: .asciiz "Ímpar na posição 3 do Vetor: "
-     
+	vetor: .word 1, 3, 5, 7, 9
+	header: .asciiz "Acessando elementos do Vetor de Ímpares\n"
+	indice: .asciiz "Digite o índice que deseja acessar: "
+	valor: .asciiz "Valor: "
+	erro: .asciiz "Índice Inválido! Só há índices entre 0 e 4 no Array!!!"
+         
 .text
 .globl main
 main:
@@ -15,54 +16,50 @@ main:
 	syscall
 	
 	li $v0, 4
-	la $a0, opcao_solucao
-	syscall
+	la $a0, indice
+	syscall 
 	
+	#lê o índice 
 	li $v0, 5
 	syscall
-	move $t1, $v0
 	
-	#carregar o vetor de impares
-	la $s0, vetor_impares
+	#índice = $s0
+	move $s0, $v0
 	
-	#desviar o fluxo conforme a entrada do usuário
-	beq $t1, 1, solucao_simples
-	beq $t1, 2, solucao_complexa
+	li $t0, 4
 	
-solucao_simples:
-	lw $t0, 8($s0) 
+	#tratando as entradas: caso o usuário digite um índice maior ou menor q existe
+	bltz $s0, msg_erro
+	bgt $s0, $t0, msg_erro
 	
-	li $v0, 4
-	la $a0 msg_valor
-	syscall
+	#endereço de a[0] = $t0
+	la $t0, vetor 		
 	
-	li $v0, 1
-	move $a0, $t0
-	syscall
-	
-	 j encerrando_execucao
-solucao_complexa: 
-	
-	#adicionar o índice ao $t2, no caso é 2 pois o primeiro elemento do veto eh zero 
-	add $t2, $zero, 2
-	
-	#dois sll multiplica por 2 duas vezes, ent armazenamos em $t1 pra saber qnts deslocamentos precisamos
-	sll $t1, $t2, 2 
-	
-	#deslocar o índice inicial e adicionar em uma variável
-	add $t3, $s0, $t1 
-	
-	#carregar o valor do índice 2 para um registrador
-	lw $t0, 0($t3) 
-	
-	li $v0, 4
-	la $a0 msg_valor
-	syscall
-	
-	li $v0, 1
-	move $a0, $t0
-	syscall
+	#calculando deslocamento
+	sll $t1, $s0, 2
 
-encerrando_execucao:
+	#deslocando
+	add $t2, $t0, $t1
+	
+	#carregando o valor do índice
+	lw $s1, 0($t2)
+	
+	#imprimindo o resultado
+	li $v0, 4
+	la $a0, valor
+	syscall
+	
+	li $v0, 1
+	move $a0, $s1
+	syscall   	   
+	
+encerra_execucao:
 	li $v0, 10
-	syscall 
+	syscall
+	
+msg_erro:
+	li $v0, 4
+	la $a0, erro
+	syscall
+	
+	j encerra_execucao
