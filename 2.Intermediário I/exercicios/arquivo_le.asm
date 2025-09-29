@@ -26,7 +26,7 @@ main:
     la   $a0, arquivo_destino  
     li   $a1, 1        # abertura p escrita (flags são 0: read, 1: write)
     li   $a2, 0       
-    syscall            # abre arquivo! (descritor do arquivo retornado em $v0)
+    syscall            # abre arquivo (descritor do arquivo retornado em $v0)
     move $s6, $v0       
     
     # verifica abertura do arquivo
