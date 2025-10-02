@@ -48,3 +48,15 @@ Para acesso a bytes, use lb/sb com offsets em bytes (não multiplique por 4).
 Em structs, calcule offsets somando o tamanho dos campos anteriores (ex: idade em offset 0, altura em 4, inicial em 8).
 
 Em algoritmos de ordenação/busca, use labels para loops e condicionais (beq, bne, slt).
+
+## Exercícios em Sala de Aula
+
+(1)
+Fazer um programa em assembly MIPS que imprima em binário uma palavra de 32 bits armazenada na memória.  
+
+Por exemplo, o conteúdo de memória no endereço determinado pelo rótulo variavel abaixo
+
+variavel: .word 0x8000000f
+deverá ser impresso como 
+
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 

@@ -119,3 +119,25 @@ Potência de 2
     Exemplo: n=5 → 32
     RESULTADO: potencia2.asm
 
+EXERCÍCIOS EM SALA 
+
+(1)Fazer um programa em assembly MIPS que imprima em binário uma palavra de 32 bits armazenada na memória.  
+
+Por exemplo, o conteúdo de memória no endereço determinado pelo rótulo variavel abaixo
+
+variavel: .word 0x8000000f
+deverá ser impresso como 
+
+1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 
+
+
+EXERCÍCIOS DE REVISÃO
+Exercício 1: Função Fatorial com Loop
+Escreva uma função chamada fatorial que recebe um número inteiro não negativo n (passado via registrador $a0) e calcula o seu fatorial (n!) usando um loop. A função deve retornar o resultado no registrador $v0. O programa principal deve chamar essa função com um valor específico (ex: 5) e armazenar o resultado na memória. Use apenas multiplicações que podem ser tratadas com mul (considere que o resultado será < 2³¹).
+
+Exercício 2: Somatório de uma Série Aritmética
+Implemente uma função chamada soma_serie que calcula a soma dos primeiros N termos de uma série. A função deve receber em $a0 o valor de N (número de termos) e em $a1 o valor inicial da série. Cada termo é calculado como (valor_inicial + i) * 2, onde i é o índice do termo (0 a N-1). Use um loop para calcular o somatório e retorne o resultado em $v0. O programa principal deve chamar a função com N=5 e valor_inicial=3, armazenando o resultado.
+
+Exercício 3: Função de Potência com Manipulação de HI/LO
+Crie uma função potencia que recebe uma base inteira em $a0 e um expoente inteiro não negativo em $a1. A função deve calcular a base elevada ao expoente usando um loop e multiplicações sucessivas. Como o resultado pode ser grande, use mult (em vez de mul) e retorne o valor de 32 bits menos significativo em $v0 (usando mflo). O programa principal deve testar a função com base=2 e expoente=10, verificando se o resultado correto (1024) é retornado.
+
