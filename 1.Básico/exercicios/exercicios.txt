@@ -119,18 +119,6 @@ Potência de 2
     Exemplo: n=5 → 32
     RESULTADO: potencia2.asm
 
-EXERCÍCIOS EM SALA 
-
-(1)Fazer um programa em assembly MIPS que imprima em binário uma palavra de 32 bits armazenada na memória.  
-
-Por exemplo, o conteúdo de memória no endereço determinado pelo rótulo variavel abaixo
-
-variavel: .word 0x8000000f
-deverá ser impresso como 
-
-1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 
-
-
 EXERCÍCIOS DE REVISÃO
 Exercício 1: Função Fatorial com Loop
 Escreva uma função chamada fatorial que recebe um número inteiro não negativo n (passado via registrador $a0) e calcula o seu fatorial (n!) usando um loop. A função deve retornar o resultado no registrador $v0. O programa principal deve chamar essa função com um valor específico (ex: 5) e armazenar o resultado na memória. Use apenas multiplicações que podem ser tratadas com mul (considere que o resultado será < 2³¹).
