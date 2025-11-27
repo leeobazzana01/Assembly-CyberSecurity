@@ -28,6 +28,27 @@ Ele fica na **região de kernel**.
 Código demonstrando os exemplos:
 Pasta de exercícios, código **excecoes_padrao.asm**.	 
 
+## Manipulação de Ponto Flutuante
+
+Os processadores possuem registradores específicos para armazenar dados no formato de ponto flutuante.
+
+No mips, há um **banco de registradores exclusivo** para números float, que são manipulados por um **Coprocessador específico**.
+
+Esses registradores usam, ao invés de 32 bits, um total de 64 bits. Para isso, o **mips combina dois regristradores 'normais'**.
+
+Os registradores são: **$f0 até $f32**.
+
+**Instruções** são terminadas em '.s' no final. As principais(mais simnples) são:
+
+**1. add.s**
+**2. sub.s**
+**3. mul.s**
+**4. div.s**
+**5. abs.** para módulo
+**6. neg.s** para not
+
+Geralmente todas as operações que são feitas no mips normalmente, são as mesmas, mas terminadas em **.s**.
+
 ##Ponteiros em MIPS
 (la vs lw, endereçamento indireto)
 

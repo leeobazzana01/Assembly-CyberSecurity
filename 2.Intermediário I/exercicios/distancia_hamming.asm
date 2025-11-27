@@ -9,10 +9,10 @@
 	
 	#mensagens
 	header: .asciiz "CALCULO DA DISTANCIA DE HAMMING\n" 
-	msg_entrada: .asciiz "Insira uma Sequência de DNA com 9 bases: "
-	msg_invalida: .asciiz "\nBase Nitrogenada Inválida!\nEncerrando Execução!\n"
+	msg_entrada: .asciiz "Insira uma sequencia de DNA com 9 bases: "
+	msg_invalida: .asciiz "\nBase nitrogenada invalida!\nEncerrando Execução!\n"
 	msg_distancia: .asciiz "\nDistancia de Hamming: "
-	msg_comprimento: .asciiz "\nComprimento Inválido da Base Nitrogenada!\nEncerrando execução!\n"
+	msg_comprimento: .asciiz "\nComprimento Invalido da Base Nitrogenada!\nEncerrando execução!\n"
 	
 .text
 .globl main
