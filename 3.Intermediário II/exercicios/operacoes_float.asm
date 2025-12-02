@@ -31,7 +31,7 @@ main:
 	syscall
 	mov.s $f2, $f0
 
-	#operacoes
+	#soma
 	li $v0, 4
 	la $a0, msg_soma
 	syscall
@@ -39,6 +39,7 @@ main:
 	li $v0, 2
 	syscall
 
+	#subt
 	li $v0, 4
 	la $a0, msg_sub
 	syscall
@@ -46,6 +47,7 @@ main:
 	li $v0, 2
 	syscall
 
+	#multiplicacao
 	li $v0, 4
 	la $a0, msg_mult
 	syscall
@@ -53,6 +55,7 @@ main:
 	li $v0, 2
 	syscall
 
+	#divisao
 	li $v0, 4
 	la $a0, msg_div
 	syscall
